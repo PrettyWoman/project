@@ -12,11 +12,7 @@ describe "Static pages" do
     it "should have the title 'Home'" do
       visit '/static_pages/home'
       page.should have_selector('title',
-                        :text => "Ruby on Rails Tutorial Sample App | Inicio")
-    end
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      page.should_not have_selector('title', :text => '| Inicio')
+                        :text => "Ruby on Rails Tutorial Sample App | Home")
     end
   end
 
@@ -30,33 +26,21 @@ describe "Static pages" do
     it "should have the title 'Help'" do
       visit '/static_pages/help'
       page.should have_selector('title',
-                        :text => "Ruby on Rails Tutorial Sample App | Ayuda")
+                        :text => "Ruby on Rails Tutorial Sample App | Help")
     end
   end
 
   describe "About page" do
 
-    it "should have the h1 'About Us'" do
+    it "should have the h1 'Sobre Nosotras'" do
       visit '/static_pages/about'
-      page.should have_selector('h1', :text => 'About us')
+      page.should have_selector('h1', :text => 'Sobre Nosotras')
     end
 
-    it "should have the title 'About Us'" do
+    it "should have the title 'Sobre Nosotras'" do
       visit '/static_pages/about'
       page.should have_selector('title',
-                    :text => "Ruby on Rails Tutorial Sample App | Sobre nosotras")
-    end
-  end
-  describe "Contact page" do
-
-    it "should have the h1 'Contact'" do
-      visit '/static_pages/contacto'
-      page.should have_selector('h1', :text => 'contacto')
-    end
-
-    it "should have the title 'Contact'" do
-      visit '/static_pages/contact'
-      page.should have_selector('title', :text => "#{base_title} | contacto")
+                    :text => "Ruby on Rails Tutorial Sample App | Sobre Nosotras")
     end
   end
 end

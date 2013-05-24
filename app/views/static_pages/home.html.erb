@@ -4,12 +4,18 @@
   <head>
     <title>Tutorial de ruby en rails | <%= yield(:title) %></title>
   </head>
-  <body>
-    <h1>Proyecto</h1>
-    <p>
-      Esta es nuestra pagina de inicio para
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      de  nuestro proyecto
-    </p>
+  <body><div class="center hero-unit">
+  <h1>Bienvenidos a nuestro proyecto</h1>
+
+  <h2>
+    esta es la pagina de inicio para
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    
+  </h2>
+
+  <%= link_to "Inicia Sesion!", '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
   </body>
 </html>

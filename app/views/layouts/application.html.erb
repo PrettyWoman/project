@@ -5,22 +5,23 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <% render 'layouts/shim' %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <% render 'layouts/header' %>
+    <%= render 'layouts/header' %>
         <div class="container">
           <%= link_to "sample app", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Inicio",    '#' %></li>
-              <li><%= link_to "Ayuda",    '#' %></li>
+              <li><%= link_to "Inicio",   root_path %></li>
+              <li><%= link_to "Ayuda",    help_path %></li>
               <li><%= link_to "Inicia Sesion", '#' %></li>
             </ul>
           </nav>
     </header>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

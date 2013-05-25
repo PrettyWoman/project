@@ -5,11 +5,10 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-   
+    <% render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
+    <% render 'layouts/header' %>
         <div class="container">
           <%= link_to "sample app", '#', id: "logo" %>
           <nav>
@@ -19,8 +18,6 @@
               <li><%= link_to "Inicia Sesion", '#' %></li>
             </ul>
           </nav>
-        </div>
-      </div>
     </header>
     <div class="container">
       <%= yield %>
